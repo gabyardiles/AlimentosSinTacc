@@ -1,0 +1,61 @@
+html,body{
+    background-image: url(Imagenes/Fondos-para-p%C3%A1ginas-web.jpg);
+    background-repeat: no-repeat;
+}
+#myCarousel{
+    height: 50%
+    width:30%;
+    left:39%;
+    top: 30%;
+    position: absolute;
+}
+.active{
+    top: 30%;
+}
+
+header{
+    position: relative;
+    width:70%;
+    margin-top:-1.7%;    
+}
+h1{
+    color: white;
+    font-size: 50px;
+    font-family:sans-serif;
+    text-align: center;
+    margin-left: 45%;
+    margin-top:5%;
+    width:55%   
+}
+
+h2{
+    color: white;
+    font-size:40px;
+    font-family:sans-serif;
+    text-align: center;
+    margin-left: 25%;
+    margin-top:46%;
+    width:55%
+}
+.menu{
+    margin-left: 2%;
+    width:95%;
+}
+button{
+    margin-top: -10%;
+    width: 7%;
+    margin-left:108%;
+}
+.dropdown-menu{
+    background-color: lightgray;
+    margin-top: -5%;
+    margin-left:108%;
+    text-align: center;
+}
+footer {
+    position: relative;
+    margin-left:16.5%;
+    align-content: center;
+    width:72%;
+    height: 15%
+}
