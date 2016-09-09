@@ -1,11 +1,10 @@
 html,body{
-    background-image: url(Imagenes/Fondos-para-p%C3%A1ginas-web.jpg);
-    background-repeat: no-repeat;
+    background-image: url(Imagenes/fondo4.jpg);
 }
 #myCarousel{
-    height:120%
-    width:50%;
-    left:39%;
+    height:120%;
+    width:25%;
+    left:37%;
     top: 40%;
     position: absolute;
 }
@@ -14,7 +13,7 @@ html,body{
 }
 
 .logoImg {
-    margin-top: -15%;
+    margin-top: -9%;    
     background-color: beige;
     width: 20%;
     border-radius: 10px;
@@ -27,14 +26,13 @@ header{
     margin-top:-2.5%;    
 }
 h1{
-    margin-top: 15%;
-    color: white;
+    color: #FF0000;
     font-size: 50px;
     font-family:sans-serif;
     text-align: center;
     margin-left:28%;
-    margin-top:5%;
-    width:55%   
+    margin-top:9%;
+    width:55%;   
 }
 
 h2{
@@ -45,17 +43,17 @@ h2{
     margin-left:20%;
     margin-top:48%;
     padding:4%;
-    width:55%
+    width:55%;
 }
 .menu{
-    margin-left: 2%;
+    margin-left: 5%;
     width:95%;
 }
 button{
     background-color: transparent;
-    margin-top: -15%;
-    width: 7%;
-    margin-left:108%;
+    margin-top: -19%;
+    width: 8%;
+    margin-left:100%;
 }
 .dropdown-menu{
     background-color: lightgray;
@@ -64,10 +62,9 @@ button{
     text-align: center;
 }
 .CloseImage{
-    width: 40px;
-    height: 40px;
-    margin-left:-670%;
-    margin-top:55%;
+    width: 20px;
+    height: 20px;
+   
 }
 footer {
     background-color: beige;
@@ -75,5 +72,15 @@ footer {
     margin-left:17%;
     align-content: center;
     width:73%;|
-    height: 15%
+    height: 15%;
+}
+section{
+    background-color: green;
+    margin:20%;
+    text-align: center;
+    margin-top: 20em;    
+
+}
+.facebook{
+    padding: 22250%;
 }
