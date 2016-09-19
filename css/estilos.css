@@ -1,0 +1,31 @@
+aside {
+	background: #ff9000;
+	color:#fff;
+}
+
+
+body
+{background: #fcfff5;}
+
+
+.color1
+{background: #91aa9d;
+ color: #fff;}
+
+ .color2
+ 	{background: #fff;
+ 		color:#363636;}
+
+.fix-block
+{padding: 0px;}
+
+
+header{background: #3e606f;
+	   color: #fff;
+	   min-height: 90px;}
+
+
+ footer
+ {background: #193441;
+ 	color: #fff;
+ 	min-height:200px;}
