@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-	<!-- CREACION DE CABECERA CON CONEXIONES A LOS CSS AL ICONO ETC.	-->
+	<!--CREACION DE CABECERA CON CONEXIONES A LOS CSS AL ICONO ETC.	-->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta name= "description" content="Es una pagina web que se dedica a la busqueda de alimentos aptos para celiacos">
@@ -12,48 +12,42 @@
 	<title>Acerca de</title>
 </head>
 	
+<header>
+		<!-- CREACION DE BARRA DE NAVEGACION
+				- Fix-block es un pading de 0px -->
 
-<body>
-	<header>
-	<!-- CREACION DE BARRA DE NAVEGACION
-			- fix-block es un pading de 0px			-->
 		<div class="container fix-block">
 			<img src="img/logo2.png" alt="Logo CeliAPP" class="img-responsive">	
-		<!--IMPLEMENTACION DE BARRA DE NAVEGACION
-			- se  usa container para contener al la barra de navegacion NAVBAR
-			-->
+			<!--IMPLEMENTACION DE BARRA DE NAVEGACION
+				- se usa container para contener al la barra de navegacion NAVBAR -->
 		<div class="container fix-block">
-		 <nav class="navbar navbar-inverse color4">
-		 <div class="container-fluid">
-		 	<div class="navbar-header">	
-		 		<!--Se crea el boton que se usar a minima resolucion
-		 		  - los span son para agregar cada rallita
-		 		  - y se hace referencia entre el menu real y la version xs (extra small) con #navbar-1
-		 		  - las clases sr-only se usan para dar funcionalidad cuando se usa un dispositivo que no soporta los script como tabletas de lecturas de pdf
-		 		  -->
-		 		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
-		 			<span class="sr-only">Menu</span>
-		 			<span class="icon-bar"></span>
-		 			<span class="icon-bar"></span>
-		 			<span class="icon-bar"></span>
-		 		</button>
-		 		<!-- Se usa para agregar al navbar puede conetener un link-->
-		 		<a href="#" class="navbar-brand">UPE </a>
-		 	</div>
-		 	
-			<!-- APARTADO DE TODOS LOS ITEMS-->
+		 	<nav class="navbar navbar-inverse color4">
+		 		<div class="container-fluid">
+		 			<div class="navbar-header">	
+		 			<!--Se crea el boton que se usar a minima resolucion
+		 		  		- los span son para agregar cada rallita
+		 		  		- y se hace referencia entre el menu real y la version xs (extra small) con #navbar-1
+		 		  		- las clases sr-only se usan para dar funcionalidad cuando se usa un dispositivo que no soporta los script como tabletas de lecturas de pdf -->
 
-			<!--Se define todo el meni y se crea el referenciador navbar-1 que sera invocado por el menu o mas bien el boton menu (de tres rallitas)
-			 -->
-			
-		 	<nav class="collapse navbar-collapse" id="navbar-1">
-		 		<ul class="nav navbar-nav">
-		 			<li><a href="index.html" >Inicio</a></li>
-		 			
-		 			<li class="dropdown">
-		 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Cuenta
-							<!--caret es una clase de flechita hacia abajo-->
-							<span class="caret"></span>
+		 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
+		 					<span class="sr-only">Menu</span>
+		 					<span class="icon-bar"></span>
+		 					<span class="icon-bar"></span>
+		 					<span class="icon-bar"></span>
+		 				</button>
+		 				<!-- Se usa para agregar al navbar puede conetener un link-->
+		 				<a href="#" class="navbar-brand">UPE </a>
+				 	</div>		 	
+					<!-- APARTADO DE TODOS LOS ITEMS
+						Se define todo el menu y se crea el referenciador navbar-1 que sera invocado por el menu o mas bien el boton menu (de tres rallitas) -->
+		 			<nav class="collapse navbar-collapse" id="navbar-1">
+		 				<ul class="nav navbar-nav">
+		 					<li><a href="index.html" >Inicio</a></li>
+		 					<!--Estructira de DropDown -->
+		 					<li class="dropdown">
+		 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Cuenta
+									<!--caret es una clase de flechita hacia abajo-->
+									<span class="caret"></span>
 		 				</a>
 		 				<!--se crea un dropdown menu para poder dar opciones de despliegue-->
 						<ul class="dropdown-menu">						
@@ -64,54 +58,44 @@
 							
 						</ul>				
 		 			</li>
-		 			
+		 			<!--Mas opciones del menu-->
 		 			<li><a href="#">Busqueda</a></li>
 		 			<li><a href="#">Informacion</a></li>
 					<li><a href="redessociales.html">Redes Sociales</a></li>
-		 			<li><a href="acercade.html">Acerca de</a></li>
-		 			
-		 		</ul>
-				
-		 		
-		 	</nav>
-		 </div>
+		 			<li><a href="acercade.html">Acerca de</a></li>		 			
+			 		</ul>		 		
+			 	</nav>
+			 </div>
 		 </nav>
-	</div>	
-		
-	</header>
-	
-	
+	</div>
+</header>
+<body>
 	<br>
-
-	<<!--MIGAS DE PAN
-
+	<!--MIGAS DE PAN
 	- El breadcrumb es una barra que contiene las direcciones o path de navegacion de la web 
 	- se crea un un OL pero se rellenan con li, se pueden poner las URL -->
 	<div class="container fix-block">		
 		<ol class="breadcrumb  color3">				
-		 <li><a href="index.html" class="migascolor">Inicio</a></li>
-		 <li>Acerca de Desarrollo de Software</li>			
+		 	<li><a href="index.html" class="migascolor">Inicio</a></li>
+		 	<li>Acerca de Desarrollo de software</li>			
 		</ol>
 	</div>
-		<!--Menu de navegacion por tabs
-			se utiliza un menu de navegacion por tab para poder ir de pagina en pagina
-			-con li se le da las pestañas y con role=presentation el estilo o funcion de pestaña -->
-		<div class="container">
-			<ul class="nav nav-tabs">
-				<li role="presentation"><a href="acercade.html">CeliAPP</a></li>
-				<li role="presentation" ><a href="acercadedesarrolladores.html">Desarrolladores</a></li>
-				<li role="presentation" class="active"><a href="#">Desarrollo de Software</a></li>
-			</ul>
-		</div>
-		<!-- Contenedor de texto
-			 con un clase main row, justificado con text-justify y compartido con una imagen de muestra. que se van a moldando en base al sistema de columnas-->
-		<div class="container">
-			<section class="main row">
+	<!--Menu de navegacion por tabs 
+		-se utiliza un menu de navegacion por tab para poder ir de pagina en pagina
+		-con li se le da las pestañas y con role=presentation el estilo o funcion de pestaña -->
+	<div class="container">
+		<ul class="nav nav-tabs">
+			<li role="presentation" ><a href="acercade.html">CeliAPP</a></li>
+			<li role="presentation" ><a href="acercadedesarrolladores.html">Desarrolladores</a></li>
+			<li role="presentation" class="active"><a href="acercadedesarollo.html">Desarrollo de Software</a></li>
+		</ul>
+	</div>
+	<!-- Contenedor de texto con una clase main row, justificado con text-justify y compartido con una imagen de muestra. que se van a    moldando en base al sistema de columnas-->
+	<div class="container">
+		<section class="main row">
 			<article class="color2 col-xs-12 col-sm-7 col-md-9 col-lg-9">
-			 <br><br><h3>UPE - Desarrollo de Software</b></h3><br><p class="text-justify">
+			 <br><br><h3>Desarrollo de software</b></h3><br><p class="text-justify">
 				Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", la tenes adentro GA cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por </p>
-
-				</article>
 					<!--
 				 - posee un container
 				 - col-xs (cantidad de columnas que ocupara en tamaño extra chico)
@@ -119,34 +103,21 @@
 				 - col-md (cantidad de columnas que ocupara en tamaño mediano)
 			 	 - col-lg (cantidad de columnas que ocupara en tamaño largo)
 			 	 - seguido de el tamaño va un numero, es el numero de columnas que puede adoptar, como maximo son 12 ( col-xs-12)
-			 	 - se usa la class row para referenciar que los elementos dentro del div son una sola fila
-	
-	
-				  -->	
+			 	 - se usa la class row para referenciar que los elementos dentro del div son una sola fila-->
+				</article>
 				<article  class="col-xs-12 col-sm-5 col-md-3 col-lg-3"> <br><img src="img/acerca01.png" class="img-responsive img-thumbnail" alt=""></article>
-
 			</section>	
-			 <br>
-				<br>
-				<br>
+			<br>
+			<br>
+			<br>
 		</div>
-
-
-<!-- Esto son contenidos en imagenes del pie de pagina.-->
-		
-						<footer> 
-	<!--Scripts necesarios para el funcionamiento de bootstrap y jquery-->
-			<div class="container fix-block">
-				<img src="img/footer.png" alt="" class="img-responsive">
-
-					   </div>
-			</footer>
-		
-
-
-	<!--Scripts necesarios-->
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	
 </body>
+		<!-- Esto son contenidos en imagenes del pie de pagina.-->
+<footer> 
+	<div class="container fix-block">
+		<img src="img/footer.png" alt="" class="img-responsive">
+   </div>
+</footer>
+	<!--Scripts necesarios para el funcionamiento de bootstrap y jquery-->
+	<script src="js/jquery.js"></script>
 </html>
