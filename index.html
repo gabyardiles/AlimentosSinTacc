@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- CREACION DE CABESERA CON CONEXIONES A LOS CSS AL ICONO ETC.	-->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta name= "description" content="Es una pagina web que se dedica a la busqueda de alimentos aptos para celiacos">
 	<link rel="shortcut icon" type="image/x-icon" href="img/celi.ico">
+	
+	<!-- Los archivos de bootstrap esta linkeados en la caperta css -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/estilos.css">
 	<title>Home</title>
 </head>
 	
 
-<body>
+
 	<header>
+
+		<!-- CREACION DE BARRA DE NAVEGACION
+			- fix-block es un pading de 0px				
+		-->
 		<div class="container fix-block">
+			<!--Imagen de logo -->
 			<img src="img/logo2.png" alt="Logo CeliAPP" class="img-responsive">	
-		<!--IMPLEMENTACION DE BARRA DE NAVEGACION-->
+		<!--IMPLEMENTACION DE BARRA DE NAVEGACION
+			- se  usa container para contener al la barra de navegacion NAVBAR
+			-->
 		<div class="container fix-block">
 		 <nav class="navbar navbar-inverse color4">
 		 <div class="container-fluid">
 		 	<div class="navbar-header">	
+		 		<!--Se crea el boton que se usar a minima resolucion
+		 		  - los span son para agregar cada rallita
+		 		  - y se hace referencia entre el menu real y la version xs (extra small) con #navbar-1
+		 		  - las clases sr-only se usan para dar funcionalidad cuando se usa un dispositivo que no soporta los script como tabletas de lecturas de pdf
+		 		  -->
+
 		 		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
 		 			<span class="sr-only">Menu</span>
 		 			<span class="icon-bar"></span>
 		 			<span class="icon-bar"></span>
 		 			<span class="icon-bar"></span>
 		 		</button>
+		 		<!-- Se usa para agregar al navbar puede conetener un link-->
 		 		<a href="#" class="navbar-brand">UPE </a>
 		 	</div>
 		 	
 			<!-- APARTADO DE TODOS LOS ITEMS-->
+
+			<!--Se define todo el meni y se crea el referenciador navbar-1 que sera invocado por el menu o mas bien el boton menu (de tres rallitas)
+			 -->
 		 	<nav class="collapse navbar-collapse" id="navbar-1">
 		 		<ul class="nav navbar-nav">
 		 			<li><a href="index.html" >Inicio</a></li>
 		 			
 		 			<li class="dropdown">
 		 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Cuenta
+							<!--caret es una clase de flechita hacia abajo-->
 							<span class="caret"></span>
 		 				</a>
+		 				<!--se crea un dropdown menu para poder dar opciones de despliegue-->
 						<ul class="dropdown-menu">						
 								<li><a href="#">Registro</a></li>
 								<li><a href="#">Loguearte</a></li>
@@ -46,7 +68,7 @@
 							
 						</ul>				
 		 			</li>
-		 			
+		 			<!--mas opciones del menu-->
 		 			<li><a href="#">Busqueda</a></li>
 		 			<li><a href="#">Informacion</a></li>
 					<li><a href="redessociales.html">Redes Sociales</a></li>
@@ -59,7 +81,7 @@
 		 </div>
 		 </nav>
 	</div>
-</section>
+
 			
 		
 	</header>
@@ -67,9 +89,12 @@
 	
 
 	</div>
+<body>
 
+	<!--MIGAS DE PAN
 
-	<!--MIGAS DE PAN-->
+	- El breadcrumb es una barra que contiene las direcciones o path de navegacion de la web 
+	- se crea un un OL pero se rellenan con li, se pueden poner las URL -->
 	<div class="container fix-block hidden-xs">		
 		<ol class="breadcrumb  color3">				
 		 <li>Inicio</li>	 
@@ -77,17 +102,23 @@
 		</ol>
 	</div>
 
+	<!--CORROUSEL DE IMAGENES
+		-se crea un conteiner para que ocupe el 100% de la plantalla se aplica un padding de 0px con la clase fix-bock
+	-->
 	<div class="container fix-block">
 		<div class="col-md12 ">
 			<div id="carousel-1" class="carousel slide" dataride="carousel">
-				<!--Indicadores-->
+				<!--Indicadores
+				    -son los indicaodres de a donde apunta cada slide -->
 				<ol class="carousel-indicators">
 					<li data-target="#carousel-1" data-slide-to="0" class="active"></li>
 					<li data-target="#carousel-1" data-slide-to="1"></li>
 					<li data-target="#carousel-1" data-slide-to="2"></li>
 				</ol>
 
-				<!--Contenedor de los slide-->
+				<!--Contenedor de los slide
+
+				 - aqui se colocan las imagenes ty con hidden-xs y hidden-sm se especifica que el texto se oculte en esos tamaños-->
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
 						<img src="img/slide1.png" class="img-responsive" alt="">
@@ -95,10 +126,13 @@
 							<h3></h3>
 						</div>
 					</div>
+					<!--los h3 esta vacios debido a que eran de prueba-->
 					<div class="item">
 						<img src="img/slide2.png" class="img-responsive" alt="">
 						<div class="carousel-caption hidden-xs hidden-sm">
 							<h3></h3>
+					
+					<!--los h3 esta vacios debido a que eran de prueba-->
 						</div>
 					</div>
 					<div class="item">
@@ -108,11 +142,23 @@
 						</div>
 					</div>
 				</div>
-				<!--Controles-->
+				<!--Controles
+
+				  - se crea un link de referencia con el nombre de #carousel-1
+				  - la clase glyphicon glyphicon-chevron-left define el icono flecha
+				  - sr-only para se usa para poder usarse en dispositivo de solo lectura
+				  - aria-hidden restringe la visibilidad de contenedor
+				   -->
 				<a href="#carousel-1" class="left carousel-control" role="button" data-slide="prev">
 				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 				<span class="sr-only">Anterior</span></a>
-
+				
+				<!--
+				  - se crea un link de referencia con el nombre de #carousel-1
+				  - la clase glyphicon glyphicon-chevron-left define el icono flecha
+				  - sr-only para se usa para poder usarse en dispositivo de solo lectura
+				  - aria-hidden restringe la visibilidad de contenedor
+				   -->
 				<a href="#carousel-1" class="right carousel-control" role="button" data-slide="prev">
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 				<span class="sr-only">Siguiente</span></a>
@@ -126,6 +172,18 @@
 
 
 
+
+	<!-- BLOQUE DE TEXTO PRINCIPAL
+				 - posee un container
+				 - col-xs (cantidad de columnas que ocupara en tamaño extra chico)
+  				 - col-sm (cantidad de columnas que ocupara en tamaño chico)
+				 - col-md (cantidad de columnas que ocupara en tamaño mediano)
+			 	 - col-lg (cantidad de columnas que ocupara en tamaño largo)
+			 	 - seguido de el tamaño va un numero, es el numero de columnas que puede adoptar, como maximo son 12 ( col-xs-12)
+			 	 - se usa la class row para referenciar que los elementos dentro del div son una sola fila
+	
+	
+				  -->		
 	<div class="container">
 		<section class="main row">
 			<article class="color2 col-xs-12 col-sm-7 col-md-9 col-lg-9">
@@ -138,7 +196,15 @@
 			</aside>
 		</section>	
 	
-
+			<!-- BLOQUE DE TEXTO Secundario
+				 - posee un container
+				 - col-xs (cantidad de columnas que ocupara en tamaño extra chico)
+  				 - col-sm (cantidad de columnas que ocupara en tamaño chico)
+				 - col-md (cantidad de columnas que ocupara en tamaño mediano)
+			 	 - col-lg (cantidad de columnas que ocupara en tamaño largo)
+			 	 - seguido de el tamaño va un numero, es el numero de columnas que puede adoptar, como maximo son 12 ( col-xs-12)
+			 	 - se usa la class row para referenciar que los elementos dentro del div son una sola fila -->
+	
 		<div class="row">
 			<div class="color1 col-xs-12 col-sm-6 col-md-3"><p>¿Qué es Lorem Ipsum?
 				Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum</p></div>
@@ -153,8 +219,8 @@
 	</div>
 		
 			<footer> 
-
-			<div class="container fix-block">
+				<!-- Esto son contenidos en imagenes del pie de pagina.-->
+				<div class="container fix-block">
 				<img src="img/footer.png" alt="" class="img-responsive">
 
 					   </div>
@@ -162,7 +228,7 @@
 		
 
 
-	<!--Scripts necesarios-->
+	<!--Scripts necesarios para el funcionamiento de bootstrap y jquery-->
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	
