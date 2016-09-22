@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Loguin en Facebook</title>
+
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/loginfacebook.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+	<link rel="stylesheet" href="css/loginfacebook.css">
+</head>
+<body>
+	<h1>Bienvenido/a a CeliAPP</h1>
+	
+
+	<!-- Boton al que se le hace referencia en el script loguinfacebook.js ubicado en la carpeta js
+	   - este sirve para poder iniciar sesion
+	   -->
+	<a href="#" id="login" class="btn btn-primary">Iniciar sesión</a>
+	
+
+	<!-- carga  script para la conexion segun la api de facebook.-->
+	<script>
+	
+
+	  (function(d, s, id) {
+	    var js, fjs = d.getElementsByTagName(s)[0];
+	    if (d.getElementById(id)) return;
+	    js = d.createElement(s); js.id = id;
+	    js.src = "//connect.facebook.net/en_US/sdk.js";
+	    fjs.parentNode.insertBefore(js, fjs);
+	  }(document, 'script', 'facebook-jssdk'));
+	 </script>
+</body>
+</html>
