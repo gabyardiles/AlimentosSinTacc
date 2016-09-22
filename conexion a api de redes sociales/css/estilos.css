@@ -1,0 +1,51 @@
+aside {
+	background: #ff9000;
+	color:#fff;
+}
+
+
+body
+{background: #fcfff5;}
+
+
+.color1
+{background: #91aa9d;
+ color: #fff;}
+
+ .color2
+ 	{background: #fff;
+ 		color:#363636;}
+
+ .color3{
+ 	background: #e87200;
+ 	color:#ffffff;
+ }
+
+ .color4
+ {background: #565656;}
+
+
+ .color5
+ {background: #565656;
+  color:#ffffff;}
+
+.migascolor
+{text-decoration: none;
+ color: #ffffff;
+ }
+
+
+.fix-block
+{padding: 0px;}
+
+
+header{
+	   background: #e87200;
+	   color: #fff;
+	   min-height: 120px;}
+
+
+ footer
+ {background: #e87200;
+ 	color: #fff;
+ 	min-height:150px;}
