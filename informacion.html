@@ -1,143 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
+
+<!-- #################################################- 01.HEAD-#################################################-->
 <head>
-	<!--CREACION DE CABECERA CON CONEXIONES A LOS CSS AL ICONO ETC.	-->
+	<!--1.1 -Declaracion de etiquetas META-->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta name= "description" content="Es una pagina web que se dedica a la busqueda de alimentos aptos para celiacos">
-	<link rel="shortcut icon" type="image/x-icon" href="img/celi.ico">
-	<!-- Los archivos de bootstrap esta linkeados en la caperta css -->
+	<!--1.2 -Declaracion de etiquetas LINK-->
+	<link rel="shortcut icon" type="image/x-icon" href="img/celi.ico">	
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/estilos.css">
+	<!--1.3 -Declaracion de etiquetas LINK-->
 	<title>Informacion</title>
 </head>
-	
+	<!--Scripts necesarios para el funcionamiento de bootstrap y jquery-->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+<!-- #################################################-FIN DE HEAD-#################################################-->
+
+<!-- #################################################- 02.HEADER -#################################################-->
 <header>
-		<!-- CREACION DE BARRA DE NAVEGACION
-				- Fix-block es un pading de 0px -->
-
-		<div class="container fix-block">
-			<img src="img/logo2.png" alt="Logo CeliAPP" class="img-responsive">	
-			<!--IMPLEMENTACION DE BARRA DE NAVEGACION
-				- se usa container para contener al la barra de navegacion NAVBAR -->
-		<div class="container fix-block">
-		 	<nav class="navbar navbar-inverse color4">
+    <!--2.1 Barra de navegacion o Navbar-->
+		<div class="container">
+		 	<nav class="navbar navbar-default navbar-fixed-top formato-nabvar">
 		 		<div class="container-fluid">
-		 			<div class="navbar-header">	
-		 			<!--Se crea el boton que se usar a minima resolucion
-		 		  		- los span son para agregar cada rallita
-		 		  		- y se hace referencia entre el menu real y la version xs (extra small) con #navbar-1
-		 		  		- las clases sr-only se usan para dar funcionalidad cuando se usa un dispositivo que no soporta los script como tabletas de lecturas de pdf -->
-
-		 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
+	<!--2.2 - Navbar Header-->	 		
+		 			<div class="navbar-header">		 			
+	<!--2.2.1 - Navbar boton de menu (vista movil)-->	
+		 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
 		 					<span class="sr-only">Menu</span>
 		 					<span class="icon-bar"></span>
 		 					<span class="icon-bar"></span>
 		 					<span class="icon-bar"></span>
 		 				</button>
-		 				<!-- Se usa para agregar al navbar puede conetener un link-->
-		 				<a href="#" class="navbar-brand">UPE </a>
+    <!--2.2.2 - Navbar Brand-->			
+		 				<a href="#" class="navbar-brand">IMG de Logo</a>
 				 	</div>		 	
-					<!-- APARTADO DE TODOS LOS ITEMS
-						Se define todo el menu y se crea el referenciador navbar-1 que sera invocado por el menu o mas bien el boton menu (de tres rallitas) -->
-		 			<nav class="collapse navbar-collapse" id="navbar-1">
-		 				<ul class="nav navbar-nav">
-		 					<li><a href="index.html" >Inicio</a></li>
-		 					<!--Estructira de DropDown -->
-		 					<li class="dropdown">
-		 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Busqueda
-									<!--caret es una clase de flechita hacia abajo-->
+	<!--2.2.3 - Navbar Menu (opciones)-->		
+					<div class="container" id="navbarcentrado">	
+		 			<nav class="collapse navbar-collapse" id="navbar-1">			
+		 				<ul class="nav navbar-nav">	
+    <!--2.2.3.1 - Opcion inicio-->		 					
+		 					<li class="reseteo-menu"><a href="index.html" ><span class="glyphicon glyphicon-home"> </span> Inicio</a></li>		 				
+    <!--2.2.3.2 - Menu desplegable de Buscar-->	
+		 					<li class="dropdown reseteo-menu">
+		 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="glyphicon glyphicon-search"></span> Buscar				
 									<span class="caret"></span>
-		 				</a>
-		 				<!--se crea un dropdown menu para poder dar opciones de despliegue-->
-						<ul class="dropdown-menu">						
-								<li><a href="#">Busqueda por producato</a></li>
-								<li><a href="#">Busqueda por categoria</a></li>
-								
-							
-						</ul>				
-		 			</li>
-		 			<!--Mas opciones del menu-->
-		 			
-		 			<li><a href="informacion.html">Informacion</a></li>
-					<li><a href="redessociales.html">Redes Sociales</a></li>
-		 			<li><a href="acercade.html">Acerca de</a></li>		 			
-			 		</ul>		 		
+		 			        	</a>
+		 				        <!--se crea un dropdown menu para poder dar opciones de despliegue-->
+						        <ul class="dropdown-menu">						
+								    <li class="reseteo-menu"><a href="#">Busqueda de producto</a></li>
+								    <li class="reseteo-menu"><a href="#">Busqueda por categoria</a></li>	
+						        </ul>				
+		 			        </li>
+   <!--2.2.3.3 - Otras opciones del menu-->				
+		 			<li class="reseteo-menu active"><a href="informacion.html"><span class="glyphicon glyphicon-info-sign"></span> Informacion</a></li>					
+		 			<li class="reseteo-menu"><a href="acercade.html"><span class="glyphicon glyphicon-bookmark"></span> Acerca de</a></li>		 			
+			 		</ul>		
+   <!--2.2.3.4 - Formulario contenedor de boton de Login-->	
+                     <form class="navbar-form navbar-right">
+ 						 <div class="form-group">
+  							<button type="submit" class="btn btn-primary reseteo-menu"><span class="glyphicon glyphicon-user"></span> Login</button>  
+ 						 </div> 						 	
+					</form>	
 			 	</nav>
+			 	</div>
 			 </div>
 		 </nav>
 	</div>
 </header>
+<!-- #################################################-FIN DEHEADER-#################################################-->
+
+<!-- #################################################-   03.BODY  -#################################################-->
 <body>
 	<br>
-	<!--MIGAS DE PAN
-
-	- El breadcrumb es una barra que contiene las direcciones o path de navegacion de la web 
-	- se crea un un OL pero se rellenan con li, se pueden poner las URL -->
-	<div class="container fix-block hidden-xs">		
-		<ol class="breadcrumb  color3">				
-		 <li>Informaci&oacute;n</li>
-
-		</ol>
+	<!--Menu de navegacion por pills 
+		-se utiliza un menu de navegacion por tab para poder ir de pagina en pagina
+		-con li se le da las pestañas y con role=presentation el estilo o funcion de pestaña -->
+	<div class="container">
+		<ul class="nav nav-pills">
+			<li role="presentation" class="active"><a href="informacion.html">Celiaquia</a></li>
+			<li role="presentation"><a href="diagnosticos.html">Diagnostico</a></li>
+			<li role="presentation"><a href="sintomatologia.html">Sintomatologia</a></li>
+		</ul>
 	</div>
-
-	<!-- BLOQUE DE TEXTO PRINCIPAL
-		 - posee un container
-		 - col-xs (cantidad de columnas que ocupara en tamaño extra chico)
-  		 - col-sm (cantidad de columnas que ocupara en tamaño chico)
-		 - col-md (cantidad de columnas que ocupara en tamaño mediano)
-		 - col-lg (cantidad de columnas que ocupara en tamaño largo)
-		 - seguido de el tamaño va un numero, es el numero de columnas que puede adoptar, como maximo son 12 ( col-xs-12)
-		 - se usa la class row para referenciar que los elementos dentro del div son una sola fila-->	
+	<!-- Contenedor de texto con una clase main row, justificado con text-justify y compartido con una imagen de muestra. que se van a    moldando en base al sistema de columnas-->
 	<div class="container">
 		<section class="main row">
-			<article class="color2 col-xs-12 col-sm-7 col-md-9 col-lg-9">
-				<div id="texto-informacion">
-					<p>
-						<p>Que es la celiaqu&iacute;a?</p>
-						La celiaquía es la intolerancia permanente al gluten, conjunto de proteínas presentes en el trigo, avena, cebada y centeno (TACC) y productos derivados de estos cuatro cereales. Pueden padecerla tanto niños como adultos. Actualmente, la incidencia es mayor en mujeres, que en varones.
-						Las proteínas se clasifican en dos grupos, prolaminas y gluteninas. Las prolaminas reciben distintos nombres según el cereal de origen: 
-
-							<p>	Trigo = gliadina</p>
-							<p>	Avena = avenina</p>
-							<p>	Cebada = hordeína</p>
-							<p>	Centeno = secalina</p>
-							
-						El gluten de los cereales mencionados es la forma más conocida de presentación de las prolaminas tóxicas para los celíacos. La gliadina constituye el mayor problema, es la más utilizada en la industria alimenticia.
-						La avena pareciera no producir daño pero, en su proceso de industrialización, puede encontrarse contaminada granos de trigo, cebada o centeno.
-						La Celiaquía se presenta en personas que tienen predisposición genética a padecerla. Se sabe que aparece con más frecuencia entre miembros de la misma familia.
-						Se estima que en Argentina 1 de cada 100 habitantes puede ser celíaco.
-						Esta intolerancia produce una lesión característica de la mucosa intestinal provocando una atrofia de las vellosidades del intestino delgado, lo que altera o disminuye la absorción de los nutrientes de los alimentos (proteínas, grasas, hidratos de carbono, sales minerales y vitaminas). Es este fenómeno el que produce el clásico cuadro de mala absorción.
-						La característica principal que define a esta atrofia vellositaria es que, la mucosa intestinal se normaliza cuando se inicia la dieta sin TACC.
-						También se presenta asociada a enfermedades autoinmunes y genéticas y se puede descubrir en pacientes asintomáticos
-						Se dice que la celiaquía es una condición autoinmune, es decir que el sistema de defensa de los celíacos reconocería como "extraño" o no perteneciente al organismo, al 
-				</div>
-			</article>
-			<aside class="col-xs-12 col-sm-5 col-md-3 col-lg-3">
-				<div id="menu-contextual">
-					<ul id="menu-informacion">
-						<li><a href="informacion.html">Qu&eacute; es la celiaqu&iacute;a?</a></li>
-						<li><a href="segunda-informacion.html">Sintomatolog&iacute;a</a></li>
-						<li><a href="tercera-informacion.html">Diagn&oacute;stico y Tratamiento</a></li>
-					</ul>
-				</div>
-
-			</aside>
-		</section>	
-	
-			</div>
+			<article class="color2 col-xs-12 col-sm-7 col-md-9 col-lg-9">			
+			 <br>
+                 <img src="img/muestra.png" alt="" class="img-responsive">
+                    
+                <!-- Migas de pan -->
+                <ol class="breadcrumb reseteo-de-migas-de-pan">				
+		 	        <li><a href="index.html" class="migascolor"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
+		 	        <li>Información</li>
+		 	        <li>Celiaquia</li>			
+		        </ol>
+			     <h3>Que es la Celiaquia?</b></h3><br><p class="text-justify">
+				Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", la tenes adentro GA cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por </p>
+					<!--
+				 - posee un container
+				 - col-xs (cantidad de columnas que ocupara en tamaño extra chico)
+  				 - col-sm (cantidad de columnas que ocupara en tamaño chico)
+				 - col-md (cantidad de columnas que ocupara en tamaño mediano)
+			 	 - col-lg (cantidad de columnas que ocupara en tamaño largo)
+			 	 - seguido de el tamaño va un numero, es el numero de columnas que puede adoptar, como maximo son 12 ( col-xs-12)
+			 	 - se usa la class row para referenciar que los elementos dentro del div son una sola fila-->
+				</article>
+				<br>
+                <div class="container hidden-xs hidden-sm col-md-3 col-lg-3">
+                    <div class="list-group">
+                      <h5 class="list-group-item active ctive"><span class="glyphicon glyphicon-bookmark"></span> Páginas Utiles</h5>
+                      <a href="#" class="list-group-item list-group-item"><span class="glyphicon glyphicon-menu-right"></span> ANMAT</a>
+                      <a href="#" class="list-group-item list-group-item"><span class="glyphicon glyphicon-heart"></span> Universidad Nacional de Ezeiza</a>
+                      <a href="#" class="list-group-item list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Informacion</a>
+                      <a href="#" class="list-group-item list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Informacion</a>
+                      <a href="#" class="list-group-item list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Informacion</a>
+                      <a href="#" class="list-group-item list-group-item"><span class="glyphicon glyphicon-menu-right"></span> Informacion</a>
+                    </div>
+            </div>
+			</section>	
+			<br>
+			<br>
+			<br>
 		</div>
-	</body>
-		
-	<footer> 
-	<!-- Esto son contenidos en imagenes del pie de pagina.-->
-		<div class="container fix-block">
-			<img src="img/footer.png" alt="" class="img-responsive">
-	   </div>
-	</footer>
+</body>
+ <!-- #################################################-FIN DE BODY#################################################-->
 
-	<!--Scripts necesarios para el funcionamiento de bootstrap y jquery-->
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+<!-- ################################################- 04.FOOTER -#################################################-->   	
+<div class="separador"></div>
+<!-- 4.1 - Declaracion de navbarfooter-->		
+<div class="footer navbar-fixed-bottom">	
+	<footer class="site-footer ">        
+<!-- 4.1.1 - Centrado de contenido-->	
+          <div class="container">     
+<!-- 4.1.2 - Se define como una fila todo el contenido-->	
+           <div class="row">
+<!-- 4.1.2.1 - Sub fila 1/3 - Imagen del logo UPE y link -->               
+            <div class="col-xs-6 col-sm-6 col-md-4">
+                <br> 
+                <a href="http://upe.edu.ar" target="_blank"><img src="img/f01.png" alt="" class="img-responsive"></a>
+            </div>
+<!-- 4.1.2.2 - Sub fila 2/3 - Logos y links de redes sociales -->  
+			<div class="col-xs-6 col-sm-6 col-md-4">
+			    <br>
+			    <a href="#" target="_blank"><img src="img/f.png" alt="" class="img-responsive"></a>
+			    <a href="#" target="_blank"><img src="img/t.png" alt="" class="img-responsive"></a>
+			    <a href="#" target="_blank"><img src="img/g+.png" alt="" class="img-responsive"></a>
+			</div>
+<!-- 4.1.2.3 - Sub fila 1/3 - Imagen de la lista de integrantes-->  
+			<div class="hidden-xs hidden-sm col-md-4">
+			    <br>
+			    <img src="img/f02.png" alt="" class="img-responsive">
+			</div>
+        </div>
+       </div>			   
+	</footer>
+ </div>
+<!-- #################################################-FIN DE FOOTER-#################################################-->	
 </html>
 
