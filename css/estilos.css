@@ -1,51 +1,28 @@
-aside {
-	background: #ff9000;
-	color:#fff;
+body
+{background: #ffffff;
+padding: 0px;}
+
+h1
+ {color:cadetblue;}
+
+header{background: #d5d5d5;            
+	   min-height: 60px;}
+
+
+footer
+ {background: #d5d5d5;
+ 	color: #fff;
+ 	min-height:100px;
+    
 }
 
 
-body
-{background: #fcfff5;}
+.reseteo-borde-migas-de-pan
+ 	{border-radius: 0px 0px 10px 10px;}
 
+.reseteo-menu
+    {min-width: 100px;}
 
-.color1
-{background: #91aa9d;
- color: #fff;}
-
- .color2
- 	{background: #fff;
- 		color:#363636;}
-
- .color3{
- 	background: #e87200;
- 	color:#ffffff;
- }
-
- .color4
- {background: #565656;}
-
-
- .color5
- {background: #565656;
-  color:#ffffff;}
-
-.migascolor
-{text-decoration: none;
- color: #ffffff;
- }
-
-
-.fix-block
-{padding: 0px;}
-
-
-header{
-	   background: #e87200;
-	   color: #fff;
-	   min-height: 120px;}
-
-
- footer
- {background: #e87200;
- 	color: #fff;
- 	min-height:200px;}
+.separador {
+	padding: 60px;
+}
