@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- #################################################- 01.HEAD-#################################################-->
+<head>
+	<!--1.1 -Declaracion de etiquetas META-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name= "description" content="Es una pagina web que se dedica a la busqueda de alimentos aptos para celiacos">
+	<!--1.2 -Declaracion de etiquetas LINK-->
+	<link rel="shortcut icon" type="image/x-icon" href="img/celi.ico">	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/estilos.css">
+	    <meta charset="UTF-8">
+    <title>Buscar</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous">  </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/database.js"></script>
+	<!--1.3 -Declaracion de etiquetas LINK-->
+	
+</head>
+
+<!-- #################################################-FIN DE HEAD-#################################################-->
+
+<!-- #################################################- 02.HEADER -#################################################-->
+<header>
+    <!--2.1 Barra de navegacion o Navbar-->
+		<div class="container">
+		 	<nav class="navbar navbar-default navbar-fixed-top formato-nabvar">
+		 		<div class="container-fluid">
+	<!--2.2 - Navbar Header-->	 		
+		 			<div class="navbar-header">		 			
+	<!--2.2.1 - Navbar boton de menu (vista movil)-->	
+		 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
+		 					<span class="sr-only">Menu</span>
+		 					<span class="icon-bar"></span>
+		 					<span class="icon-bar"></span>
+		 					<span class="icon-bar"></span>
+		 				</button>
+    <!--2.2.2 - Navbar Brand-->			
+		 				<a href="#" class="navbar-brand">IMG de Logo</a>
+				 	</div>		 	
+	<!--2.2.3 - Navbar Menu (opciones)-->		
+					<div class="container" id="navbarcentrado">	
+		 			<nav class="collapse navbar-collapse" id="navbar-1">			
+		 				<ul class="nav navbar-nav">	
+    <!--2.2.3.1 - Opcion inicio-->		 					
+		 					<li class="reseteo-menu active"><a href="index.html" ><span class="glyphicon glyphicon-home"> </span> Inicio</a></li>		 				
+    <!--2.2.3.2 - Menu desplegable de Buscar-->	
+		 					<li class="dropdown reseteo-menu">
+		 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="glyphicon glyphicon-search"></span> Buscar				
+									<span class="caret"></span>
+		 			        	</a>
+		 				        <!--se crea un dropdown menu para poder dar opciones de despliegue-->
+						        <ul class="dropdown-menu">						
+								    <li class="reseteo-menu"><a href="#">Busqueda de producto</a></li>
+								    <li class="reseteo-menu"><a href="#">Busqueda por categoria</a></li>	
+						        </ul>				
+		 			        </li>
+   <!--2.2.3.3 - Otras opciones del menu-->				
+		 			<li class="reseteo-menu"><a href="informacion.html"><span class="glyphicon glyphicon-info-sign"></span> Informacion</a></li>					
+		 			<li class="reseteo-menu"><a href="acercade.html"><span class="glyphicon glyphicon-bookmark"></span> Acerca de</a></li>		 			
+			 		</ul>		
+   <!--2.2.3.4 - Formulario contenedor de boton de Login-->	
+                     <form class="navbar-form navbar-right">
+ 						 <div class="form-group">
+  							<button type="submit" class="btn btn-primary reseteo-menu" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span> Login</button>  
+ 						 </div> 						 	
+					</form>	
+			 	</nav>
+			 	</div>
+			 </div>
+		 </nav>
+	</div>
+
+<!--2.3 - Menu de redes sociales-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+		
+</header>
+<!-- #################################################-FIN DEHEADER-#################################################-->
+
+
+   <body> 
+  
+   <div class="container">
+    <div class="form-group">
+    <label class="sr-only">Buscar</label>    
+  </div>
+  <div class="form-group">
+    <label for="buscar" class="sr-only">Buscar</label>
+    <input type="text" class="form-control" id="buscar-texto" placeholder="Buscar">
+  </div>
+  <button type="submit" class="btn btn-primary" id="buscar">Buscar</button>
+</form>
+  <br><br>
+   <div class="container">
+      <table class="table table-striped table-hover table-bordered" id="tabla-busqueda">
+		<tr>
+			<td><b>#ID</b></td>
+			<td><b>Tipo</b></td>
+			<td><b>Marca</b></td>
+            <td><b>Nombre</b></td>
+			<td><b>Denominacion</b></td>
+			<td><b>RNPA</b></td>		    
+		</tr>
+    	
+
+
+	</table>
+   </div>
+    </div>
+    <div id="algo"></div>	
+</body>
+
+
+<!-- ################################################- 04.FOOTER -#################################################-->   	
+<div class="separador"></div>
+<!-- 4.1 - Declaracion de navbarfooter-->		
+<div class="footer navbar-fixed-bottom">	
+	<footer class="site-footer ">        
+<!-- 4.1.1 - Centrado de contenido-->	
+          <div class="container">     
+<!-- 4.1.2 - Se define como una fila todo el contenido-->	
+           <div class="row">
+<!-- 4.1.2.1 - Sub fila 1/3 - Imagen del logo UPE y link -->               
+            <div class="col-xs-6 col-sm-6 col-md-4">
+                <br> 
+                <a href="http://upe.edu.ar" target="_blank"><img src="img/f01.png" alt="" class="img-responsive"></a>
+            </div>
+<!-- 4.1.2.2 - Sub fila 2/3 - Logos y links de redes sociales -->  
+			<div class="col-xs-6 col-sm-6 col-md-4">
+			    <br>
+			    <a href="#" target="_blank"><img src="img/f.png" alt="" class="img-responsive"></a>
+			    <a href="#" target="_blank"><img src="img/t.png" alt="" class="img-responsive"></a>
+			    <a href="#" target="_blank"><img src="img/g+.png" alt="" class="img-responsive"></a>
+			</div>
+<!-- 4.1.2.3 - Sub fila 1/3 - Imagen de la lista de integrantes-->  
+			<div class="hidden-xs hidden-sm col-md-4">
+			    <br>
+			    <img src="img/f02.png" alt="" class="img-responsive">
+			</div>
+        </div>
+       </div>			   
+	</footer>
+ </div>
+<!-- #################################################-FIN DE FOOTER-#################################################-->	
+</html>
+
