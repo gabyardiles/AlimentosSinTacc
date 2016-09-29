@@ -99,35 +99,32 @@
 
 
    <body> 
-  
-   <div class="container">
-    <div class="form-group">
-    <label class="sr-only">Buscar</label>    
-  </div>
-  <div class="form-group">
-    <label for="buscar" class="sr-only">Buscar</label>
-    <input type="text" class="form-control" id="buscar-texto" placeholder="Buscar">
-  </div>
-  <button type="submit" class="btn btn-primary" id="buscar">Buscar</button>
-</form>
+<div class="container">
+<br><br>
+	<div class="row">
+		<div class="form-group col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			<label for="nombre" class="sr-only">Nombre:</label>
+			<input type="text" class="form-control" id="buscar-texto" placeholder="Buscar">
+		</div>		
+		<div class="form-group">
+		    <button type="submit" class="btn btn-primary" id="buscar">Buscar</button>
+        </div>		    
+	</div>
+</div>   
+
   <br><br>
-   <div class="container">
-      <table class="table table-striped table-hover table-bordered" id="tabla-busqueda">
-		<tr>
-			<td><b>#ID</b></td>
-			<td><b>Tipo</b></td>
-			<td><b>Marca</b></td>
-            <td><b>Nombre</b></td>
-			<td><b>Denominacion</b></td>
-			<td><b>RNPA</b></td>		    
-		</tr>
-    	
-
-
-	</table>
-   </div>
-    </div>
-    <div id="algo"></div>	
+   <div class="container">     
+        <table class="table table-striped table-hover table-bordered" id="tabla-busqueda">
+		    <tr class="success">
+		    	<td><b>#ID</b></td>
+			    <td><b>Tipo</b></td>
+    			<td><b>Marca</b></td>
+                <td><b>Nombre</b></td>
+    			<td><b>Denominacion</b></td>
+		    	<td><b>RNPA</b></td>		    
+	    	</tr>
+	    </table>
+   </div> 	
 </body>
 
 
